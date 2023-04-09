@@ -11,7 +11,7 @@ encoding = tiktoken.get_encoding(embedding_encoding)
 
 # app
 st.title('Tokens Counter for OpenAI embeddings')
-st.write("This app calculates the number of tokens in a given text or CSV file. Calculating the number of tokens for a given text is essential when working with OpenAI's API.")
+st.write("This application calculates the number of tokens in a given text or multiple texts passed in a CSV file. Counting the number of tokens is essential when working with OpenAI's API.")
 st.markdown(
     "The maximum number of tokens is limited to **8191** as of **2023-04-09**")
 
@@ -24,7 +24,7 @@ if st.button("Count tokens (text)"):
     st.info(f"Required tokens: {n_tokens:,.0f}")
 
 # add file uploader
-st.subheader("Multi-text tokens Counter")
+st.subheader("Multi-text tokens counter")
 uploaded_file = st.file_uploader("Choose an CSV file, with column 'text'")
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)

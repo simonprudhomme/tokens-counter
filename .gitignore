@@ -1,0 +1,5 @@
+# add Pipfile.lock to gitignore
+Pipfile.lock
+
+# add .vscode to gitignore
+.vscode
