@@ -13,7 +13,7 @@ encoding = tiktoken.get_encoding(embedding_encoding)
 st.title('Tokens Counter for OpenAI embeddings')
 st.write("This application calculates the number of tokens in a given text or multiple texts passed in a CSV file. Counting the number of tokens is essential when working with OpenAI's API.")
 st.markdown(
-    "The maximum number of tokens is limited to **8191** as of **2023-04-09**")
+    "The maximum number of input tokens is limited to **8191** as of **2023-04-09** with **cl100k_base/text-embedding-ada-002** tokenizer/model")
 
 # create subheader
 st.subheader("Text tokens counter")
